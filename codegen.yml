@@ -1,0 +1,13 @@
+schema: https://info-api.9mm.pro/subgraphs/name/pulsechain/9mm-v3
+documents: ['src/**/*.tsx', 'src/**/*.ts']
+generates:
+  ./src/graphql/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withHOC: false
+      withComponent: false
+      skipTypename: false
